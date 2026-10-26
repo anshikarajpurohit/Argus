@@ -10,12 +10,12 @@ export function ErrorBox({ error }) {
     </div>
   ) : null;
 }
-export function Empty({ text = "No records yet" }) {
+export function Empty({ text = "No records yet", description = "Activity from your connected agent will appear here." }) {
   return (
     <div className="empty">
       <span>◎</span>
       <strong>{text}</strong>
-      <p>Activity from your connected agent will appear here.</p>
+      <p>{description}</p>
     </div>
   );
 }

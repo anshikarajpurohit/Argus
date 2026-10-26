@@ -1,0 +1,6 @@
+{
+  "streams": 390,
+  "seed": 42,
+  "byteIdenticalStreamsAndLabels": true,
+  "splitRunsDisjoint": true
+}

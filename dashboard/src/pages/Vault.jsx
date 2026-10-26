@@ -152,7 +152,7 @@ export default function Vault() {
             </table>
           </div>
         ) : (
-          <Empty text="Your vault is empty" />
+          <Empty text="Your vault is empty" description="Upload a file above to protect it with a password." />
         )}
       </section>
       <p className="footnote">

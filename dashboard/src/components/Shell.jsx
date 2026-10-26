@@ -16,7 +16,7 @@ export default function Shell() {
       import.meta.env.VITE_SOCKET_URL || window.location.origin,
       { auth: { token: getToken() } },
     );
-    socket.on("connect", () => C(true));
+    socket.on("connect", () => { C(true); R(x => x + 1); });
     socket.on("disconnect", () => C(false));
     socket.on("connect_error", () => C(false));
     for (const name of ["alert:new", "event:new", "settings:updated"])

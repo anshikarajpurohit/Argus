@@ -1,0 +1,7 @@
+{
+  "outageCreatedFiles": 10,
+  "duplicateEventIds": 0,
+  "readTriggeredAlert": false,
+  "deleteAlertLatencySeconds": 0.062416791915893555,
+  "canaryRecreationSeconds": 5.267336845397949
+}

@@ -1,0 +1,42 @@
+name: Argus checks
+on:
+  push:
+  pull_request:
+jobs:
+  agent:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: agent/requirements.txt
+      - run: python -m pip install -r agent/requirements.txt
+      - run: python -m pytest -q
+  javascript:
+    runs-on: ubuntu-latest
+    services:
+      mongodb:
+        image: mongo:8.0
+        ports:
+          - 27028:27017
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            backend/package-lock.json
+            dashboard/package-lock.json
+      - run: npm ci --prefix dashboard
+      - run: npm ci --prefix backend
+      - run: npm test --prefix backend
+      - run: npm run lint --prefix backend
+      - run: npm test --prefix dashboard
+      - run: npm run lint --prefix dashboard
+      - run: npm run build --prefix dashboard

@@ -36,7 +36,7 @@ def main() -> None:
     transport=Transport(cfg);window=Window(cfg['window_seconds']);scorer=Scorer(cfg);model=Model(cfg['ml_model_path']);settings=cfg.copy()
     observer=Observer()
     for root in cfg['watch_paths']: observer.schedule(handler,root,recursive=True)
-    observer.start();running=True
+    canaries.arm();observer.start();running=True
     def stop(*_):
         nonlocal running
         running=False

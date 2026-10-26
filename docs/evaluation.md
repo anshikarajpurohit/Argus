@@ -40,7 +40,9 @@ The model is enabled, thresholds are 40/70, and response mode is alert-only. The
 | rename | 0/10 | 0/10 | — | — |
 | canary | 10/10 | 10/10 | 0.990 / 1.050 | 0.990 / 1.050 |
 
-Idle CPU: **3.73%** of one logical CPU on average over 60.0 seconds with 1,000 text fixtures, additional high-entropy fixtures, and canaries. This meets the <10% target on this machine.
+Idle CPU: **4.01%** of one logical CPU on average over 60.0 seconds with 1,000 text fixtures, additional high-entropy fixtures, and canaries. This meets the <10% target on this machine.
+
+Live benign editing: **0 alerts** over **601.7 seconds**. This is a ten-minute observation, not proof of long-term real-world false-positive performance.
 
 ## Synthetic replay and model performance
 

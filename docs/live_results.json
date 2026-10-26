@@ -395,9 +395,15 @@
     }
   ],
   "idle": {
-    "seconds": 60.01107249996858,
+    "seconds": 60.00872083398281,
     "files": 1000,
-    "cpuPercent": 3.7315593984779603
+    "cpuPercent": 4.0055318336977574
   },
-  "errors": []
+  "benign": {
+    "seconds": 601.6599719524384,
+    "alerts": 0,
+    "filesTouched": 201
+  },
+  "errors": [],
+  "benignMeasurement": "Separate dedicated workload; concurrent harness target-variable defect fixed and separately smoke-tested"
 }

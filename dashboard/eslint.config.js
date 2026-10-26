@@ -1,0 +1,1 @@
+export default [{files:['src/**/*.js','src/**/*.jsx'],languageOptions:{ecmaVersion:'latest',sourceType:'module',parserOptions:{ecmaFeatures:{jsx:true}}},rules:{'no-unreachable':'error','no-constant-condition':'error','no-dupe-keys':'error'}}];

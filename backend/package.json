@@ -7,12 +7,15 @@
     "start": "node src/server.js",
     "dev": "node --watch src/server.js",
     "seed:admin": "node src/seed.js",
-    "test": "node test.js",
+    "test": "node run-tests.js",
     "lint": "eslint src tests"
   },
   "jest": {
     "testEnvironment": "node",
-    "transform": {}
+    "transform": {},
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
   },
   "dependencies": {
     "bcryptjs": "3.0.3",

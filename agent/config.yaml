@@ -1,0 +1,30 @@
+agent_id: "agent-001"
+backend_url: "http://localhost:5000"
+agent_api_key: "CHANGE_ME"        # must equal AGENT_API_KEY in backend .env
+watch_paths:
+  - "./testbed"
+ignore_patterns: ["*.tmp", "~$*", ".git/*", "__pycache__/*"]
+entropy_sample_bytes: 65536
+entropy_min_file_bytes: 512
+entropy_spike_min: 7.5
+entropy_spike_delta: 2.0
+high_entropy_ok_ext: [".zip", ".gz", ".7z", ".rar", ".jpg", ".jpeg", ".png", ".mp3", ".mp4", ".mkv", ".pdf", ".docx", ".xlsx", ".pptx", ".webp"]
+known_ext: [".txt", ".csv", ".json", ".md", ".log", ".pdf", ".docx", ".xlsx", ".pptx", ".jpg", ".png", ".zip", ".py", ".js", ".html"]
+suspicious_ext: [".locked", ".enc", ".encrypted", ".crypt", ".crypted", ".lock", ".xxx"]
+canary_names: ["_important_passwords.txt", "_financial_records.csv", "_backup_keys.docx.txt"]
+window_seconds: 10
+score_interval_seconds: 2
+scoring:
+  canary_hit: 100
+  mass_modify: {min_count: 20, points: 30}
+  entropy_spike: {min_count: 5, points: 40}
+  ext_change: {min_count: 5, points: 20}
+  mass_delete: {min_count: 10, points: 10}
+  wide_spread: {min_dirs: 5, min_files: 20, points: 10}
+  ml: {min_probability: 0.8, points: 30}
+ml_model_path: "./models/rf_model.joblib"
+
+warningThreshold: 40
+criticalThreshold: 70
+responseMode: alert_only
+processAllowlist: [explorer.exe, systemd, python, node, mongod, code, chrome, firefox]

@@ -1,0 +1,2 @@
+import mongoose from 'mongoose';
+export default mongoose.model('Event',new mongoose.Schema({eventId:{type:String,unique:true},agentId:String,ts:{type:Number,index:true},action:String,path:String,destPath:String,ext:String,destExt:String,sizeBytes:Number,entropy:Number,prevEntropy:Number,isCanary:Boolean,suspectPid:Number,suspectProcess:String,expiresAt:{type:Date,index:{expireAfterSeconds:0}}},{versionKey:false}));

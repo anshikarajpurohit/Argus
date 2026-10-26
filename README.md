@@ -6,6 +6,12 @@ Argus implements the Mini-EDR specification as a local, educational endpoint-mon
 
 **Status:** all application components are implemented. See [evaluation](docs/evaluation.md) for measured results, unmet targets, and platform coverage. Detection is heuristic; this is not a commercial EDR or antivirus replacement.
 
+## Dashboard preview
+
+![Argus dashboard with synthetic evaluation activity](docs/screenshots/overview.png)
+
+The screenshot contains disposable test activity, not real threat detections.
+
 ## Architecture
 
 ```mermaid
@@ -134,7 +140,7 @@ npm run lint
 npm run build
 ```
 
-Backend integration tests require a running MongoDB instance. They default to port **27028** to keep tests separate from development. Set `MONGO_TEST_URI=mongodb://127.0.0.1:27017/` to use an existing local server; every test run uses and drops its own randomly named `argus_test_*` database. Install dashboard dependencies before backend tests because their Socket.IO client test uses the dashboard's installed client.
+Backend integration tests require a running MongoDB instance. They default to port **27028** to keep tests separate from development. Set `MONGO_TEST_URI=mongodb://127.0.0.1:27017/` to use an existing local server; every test run uses and drops its own randomly named `argus_test_*` database.
 
 For live timing, idle CPU, and benign-workload measurements see [the end-to-end procedure](dataset/run_e2e.md). The reproducible harness is `dataset/benchmark_live.py`; it requires a running backend, `AGENT_API_KEY`, `ADMIN_USER`, and `ADMIN_PASS` in its environment, and refuses to run when suspension is enabled.
 

@@ -1,0 +1,403 @@
+{
+  "platform": "darwin",
+  "seed": 42,
+  "runs": 10,
+  "trials": [
+    {
+      "mode": "fast",
+      "run": 0,
+      "latencySeconds": 0.9714541435241699,
+      "criticalLatencySeconds": 2.994163990020752,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 1,
+      "latencySeconds": 0.8890299797058105,
+      "criticalLatencySeconds": 2.8936569690704346,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 2,
+      "latencySeconds": 0.9750452041625977,
+      "criticalLatencySeconds": 3.0121731758117676,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 3,
+      "latencySeconds": 0.9345390796661377,
+      "criticalLatencySeconds": 2.937796115875244,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 4,
+      "latencySeconds": 0.9829680919647217,
+      "criticalLatencySeconds": 3.0482921600341797,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 5,
+      "latencySeconds": 0.9491608142852783,
+      "criticalLatencySeconds": 2.9803149700164795,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 6,
+      "latencySeconds": 0.9642972946166992,
+      "criticalLatencySeconds": 3.0157103538513184,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 7,
+      "latencySeconds": 0.8823080062866211,
+      "criticalLatencySeconds": 2.900197982788086,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 8,
+      "latencySeconds": 0.9127321243286133,
+      "criticalLatencySeconds": 2.918990135192871,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "fast",
+      "run": 9,
+      "latencySeconds": 0.9180600643157959,
+      "criticalLatencySeconds": 2.934573173522949,
+      "severities": [
+        "CRITICAL",
+        "WARNING"
+      ],
+      "alerts": 2
+    },
+    {
+      "mode": "slow",
+      "run": 0,
+      "latencySeconds": 8.980103015899658,
+      "criticalLatencySeconds": 8.980103015899658,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 1,
+      "latencySeconds": 9.119970798492432,
+      "criticalLatencySeconds": 9.119970798492432,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 2,
+      "latencySeconds": 9.051174879074097,
+      "criticalLatencySeconds": 9.051174879074097,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 3,
+      "latencySeconds": 8.97937297821045,
+      "criticalLatencySeconds": 8.97937297821045,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 4,
+      "latencySeconds": 8.995038032531738,
+      "criticalLatencySeconds": 8.995038032531738,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 5,
+      "latencySeconds": 9.036466121673584,
+      "criticalLatencySeconds": 9.036466121673584,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 6,
+      "latencySeconds": 9.034096956253052,
+      "criticalLatencySeconds": 9.034096956253052,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 7,
+      "latencySeconds": 8.999785900115967,
+      "criticalLatencySeconds": 8.999785900115967,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 8,
+      "latencySeconds": 9.071441888809204,
+      "criticalLatencySeconds": 9.071441888809204,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "slow",
+      "run": 9,
+      "latencySeconds": 9.038467168807983,
+      "criticalLatencySeconds": 9.038467168807983,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "rename",
+      "run": 0,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 1,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 2,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 3,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 4,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 5,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 6,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 7,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 8,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "rename",
+      "run": 9,
+      "latencySeconds": null,
+      "criticalLatencySeconds": null,
+      "severities": [],
+      "alerts": 0
+    },
+    {
+      "mode": "canary",
+      "run": 0,
+      "latencySeconds": 0.9949212074279785,
+      "criticalLatencySeconds": 0.9949212074279785,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 1,
+      "latencySeconds": 0.9860408306121826,
+      "criticalLatencySeconds": 0.9860408306121826,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 2,
+      "latencySeconds": 0.9933609962463379,
+      "criticalLatencySeconds": 0.9933609962463379,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 3,
+      "latencySeconds": 0.9816591739654541,
+      "criticalLatencySeconds": 0.9816591739654541,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 4,
+      "latencySeconds": 0.9898040294647217,
+      "criticalLatencySeconds": 0.9898040294647217,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 5,
+      "latencySeconds": 0.9904100894927979,
+      "criticalLatencySeconds": 0.9904100894927979,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 6,
+      "latencySeconds": 0.9888710975646973,
+      "criticalLatencySeconds": 0.9888710975646973,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 7,
+      "latencySeconds": 0.9881389141082764,
+      "criticalLatencySeconds": 0.9881389141082764,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 8,
+      "latencySeconds": 0.9945850372314453,
+      "criticalLatencySeconds": 0.9945850372314453,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    },
+    {
+      "mode": "canary",
+      "run": 9,
+      "latencySeconds": 1.0496299266815186,
+      "criticalLatencySeconds": 1.0496299266815186,
+      "severities": [
+        "CRITICAL"
+      ],
+      "alerts": 1
+    }
+  ],
+  "idle": {
+    "seconds": 60.01107249996858,
+    "files": 1000,
+    "cpuPercent": 3.7315593984779603
+  },
+  "errors": []
+}

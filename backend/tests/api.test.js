@@ -1,4 +1,4 @@
-import { beforeAll, afterAll, beforeEach, test, expect } from "@jest/globals";
+import { beforeAll, afterAll, test, expect } from "@jest/globals";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 import request from "supertest";
@@ -7,7 +7,7 @@ import { mkdtemp, rm, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { createServer } from "node:http";
-import { createRequire } from "node:module";
+import { io as client } from "socket.io-client";
 import { createApp } from "../src/app.js";
 import { createSocket } from "../src/services/socket.js";
 import { loadConfig } from "../src/config.js";
@@ -16,8 +16,6 @@ import Event from "../src/models/Event.js";
 import Alert from "../src/models/Alert.js";
 import Settings from "../src/models/Settings.js";
 import VaultItem from "../src/models/VaultItem.js";
-const require = createRequire(import.meta.url);
-const { io: client } = require("../../dashboard/node_modules/socket.io-client");
 let app, token, config, directory;
 const db = "argus_test_" + randomUUID().replaceAll("-", "");
 const event = () => ({

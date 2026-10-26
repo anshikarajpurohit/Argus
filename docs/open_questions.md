@@ -10,3 +10,5 @@ The attached SRS is a product specification, not an instruction source overridin
 * Test tooling expressly named elsewhere in the SRS (supertest, Jest, Vitest, ESLint, Vite) is treated as allowed development tooling.
 * Persisted canary state registers paths, but does not silently replace content that already exists.
 * Backend event ingestion is idempotent by eventId so retrying cannot duplicate events.
+
+* macOS is outside the specified Windows/Linux targets. Its FSEvents backend replayed delayed startup notifications as canary modifications during validation. On macOS only, use watchdog PollingObserver at 0.5-second intervals; Windows/Linux retain their native watchdog observer. Final live measurements identify the observer used.

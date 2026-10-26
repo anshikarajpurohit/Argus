@@ -3,10 +3,12 @@ import argparse
 import logging
 import queue
 import signal
+import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from watchdog.observers import Observer
+from watchdog.observers.polling import PollingObserver
 from edr_agent.config import load_config,ROOT
 from edr_agent.analyzer import Analyzer
 from edr_agent.canary import Canaries
@@ -34,7 +36,7 @@ def main() -> None:
     for root in cfg['watch_paths']:
         analyzer.baseline([str(p) for p in Path(root).rglob('*') if p.is_file() and not handler.ignored(str(p))])
     transport=Transport(cfg);window=Window(cfg['window_seconds']);scorer=Scorer(cfg);model=Model(cfg['ml_model_path']);settings=cfg.copy()
-    observer=Observer()
+    observer=PollingObserver(timeout=0.5) if sys.platform == "darwin" else Observer()
     for root in cfg['watch_paths']: observer.schedule(handler,root,recursive=True)
     canaries.arm();observer.start();running=True
     def stop(*_):

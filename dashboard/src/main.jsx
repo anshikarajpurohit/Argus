@@ -1,10 +1,10 @@
-import React from 'react';
-import {createRoot} from 'react-dom/client';
-import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom';
-import {getToken} from './api';
-import Shell from './components/Shell';
-import Login from './pages/Login';
-import './style.css';
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { getToken } from "./api";
+import Shell from "./components/Shell";
+import Login from "./pages/Login";
+import "./style.css";
 function Protected() {
   return getToken() ? <Shell /> : <Navigate to="/login" replace />;
 }
@@ -18,4 +18,4 @@ function App() {
     </BrowserRouter>
   );
 }
-createRoot(document.getElementById('root')).render(<App/>);
+createRoot(document.getElementById("root")).render(<App />);

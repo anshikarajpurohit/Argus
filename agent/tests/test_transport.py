@@ -31,3 +31,20 @@ def test_queue_bound_and_immediate_alert(monkeypatch,cfg):
             assert len(transport.events)==5000 and transport.events[0]['eventId']=='1'
             transport.events.clear()
     finally:transport.close()
+
+
+def test_alert_does_not_wait_for_event_backoff(monkeypatch,cfg):
+    from threading import Event
+    failed=Event();delivered=Event();session=Mock();session.headers={}
+    def post(url,**kwargs):
+        if url.endswith('/api/events/batch'):
+            failed.set();raise requests.ConnectionError()
+        delivered.set();return Mock()
+    session.post.side_effect=post;monkeypatch.setattr(requests,'Session',lambda:session)
+    transport=Transport(cfg)
+    try:
+        for i in range(200):transport.add({'eventId':str(i)})
+        assert failed.wait(1)
+        transport.alert({'alertId':'priority'})
+        assert delivered.wait(.8)
+    finally:transport.close()

@@ -1,12 +1,18 @@
-import React,{useState,useEffect} from 'react';
-import {NavLink,Routes,Route,Navigate,useNavigate} from 'react-router-dom';
-import {io} from 'socket.io-client';
-import {getToken,setToken} from '../api';
-import Overview from '../pages/Overview';
-import Alerts from '../pages/Alerts';
-import Events from '../pages/Events';
-import Settings from '../pages/Settings';
-import Vault from '../pages/Vault';
+import React, { useState, useEffect } from "react";
+import {
+  NavLink,
+  Routes,
+  Route,
+  Navigate,
+  useNavigate,
+} from "react-router-dom";
+import { io } from "socket.io-client";
+import { getToken, setToken } from "../api";
+import Overview from "../pages/Overview";
+import Alerts from "../pages/Alerts";
+import Events from "../pages/Events";
+import Settings from "../pages/Settings";
+import Vault from "../pages/Vault";
 export default function Shell() {
   const [connected, C] = useState(false),
     [refresh, R] = useState(0);
@@ -16,7 +22,10 @@ export default function Shell() {
       import.meta.env.VITE_SOCKET_URL || window.location.origin,
       { auth: { token: getToken() } },
     );
-    socket.on("connect", () => { C(true); R(x => x + 1); });
+    socket.on("connect", () => {
+      C(true);
+      R((x) => x + 1);
+    });
     socket.on("disconnect", () => C(false));
     socket.on("connect_error", () => C(false));
     for (const name of ["alert:new", "event:new", "settings:updated"])

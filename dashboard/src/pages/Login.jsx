@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { api, getToken, setToken, message } from '../api';
-import { Badge, ErrorBox, Empty, Title, AlertTable, time } from '../components/common';
-import { useData } from '../hooks/useData';
-import { securityStatus, byteSize } from '../helpers';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { api, setToken, message } from "../api";
+import { ErrorBox } from "../components/common";
 export default function Login() {
   const [username, U] = useState(""),
     [password, P] = useState(""),

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 export const time = (ts) => new Date(ts * 1000).toLocaleString();
 export const Badge = ({ value }) => (
   <span className={"badge " + value.toLowerCase()}>{value}</span>
@@ -10,7 +10,10 @@ export function ErrorBox({ error }) {
     </div>
   ) : null;
 }
-export function Empty({ text = "No records yet", description = "Activity from your connected agent will appear here." }) {
+export function Empty({
+  text = "No records yet",
+  description = "Activity from your connected agent will appear here.",
+}) {
   return (
     <div className="empty">
       <span>◎</span>

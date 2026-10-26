@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { api, getToken, setToken, message } from '../api';
-import { Badge, ErrorBox, Empty, Title, AlertTable, time } from '../components/common';
-import { useData } from '../hooks/useData';
-import { securityStatus, byteSize } from '../helpers';
+import React, { useState } from "react";
+import { api, message } from "../api";
+import { ErrorBox, Empty, Title } from "../components/common";
+import { useData } from "../hooks/useData";
+import { byteSize } from "../helpers";
 export default function Vault() {
   const [refresh, R] = useState(0),
     [file, F] = useState(null),
@@ -152,7 +151,10 @@ export default function Vault() {
             </table>
           </div>
         ) : (
-          <Empty text="Your vault is empty" description="Upload a file above to protect it with a password." />
+          <Empty
+            text="Your vault is empty"
+            description="Upload a file above to protect it with a password."
+          />
         )}
       </section>
       <p className="footnote">

@@ -93,7 +93,7 @@ In PowerShell use `$env:AGENT_API_KEY='<value>'`. Alternatively set `agent_api_k
 
 Watch paths are resolved relative to the repository root. Model paths are relative to `agent/`. The default watch path is the disposable `testbed/` folder. Change `watch_paths` only to folders you intend to monitor. Three canary files are created in each watched root. The vault directory, agent state directory, and selected configuration file are excluded even when an ancestor is watched. Logging goes to standard error, not to watched log files.
 
-**macOS note:** port 5000 may be used by AirPlay, and `localhost` may resolve to its IPv6 listener. Set `backend_url: "http://127.0.0.1:5000"` in your local agent configuration if health checks or agent requests reach the wrong service. If changing the backend port, change the Vite proxy target and agent backend URL together.
+**macOS note:** the agent uses watchdog’s polling observer at 0.5-second intervals to avoid delayed FSEvents startup notifications. Windows/Linux use native observers. Port 5000 may be used by AirPlay, and `localhost` may resolve to its IPv6 listener. Set `backend_url: "http://127.0.0.1:5000"` in your local agent configuration if health checks or agent requests reach the wrong service. If changing the backend port, change the Vite proxy target and agent backend URL together.
 
 ## Safe demonstrations
 

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
-import { api, getToken, setToken, message } from '../api';
-import { Badge, ErrorBox, Empty, Title, AlertTable, time } from '../components/common';
-import { useData } from '../hooks/useData';
-import { securityStatus, byteSize } from '../helpers';
+import React, { useState } from "react";
+import { api, message } from "../api";
+import { ErrorBox, Title } from "../components/common";
+import { useData } from "../hooks/useData";
 export default function Settings() {
   const { data, setData, error } = useData("/settings");
   const [notice, N] = useState(""),
@@ -15,7 +13,14 @@ export default function Settings() {
     E("");
     N("");
     try {
-      await api.put("/settings", data);
+      const saved = {
+        ...data,
+        processAllowlist: data.processAllowlist
+          .map((name) => name.trim())
+          .filter(Boolean),
+      };
+      await api.put("/settings", saved);
+      setData(saved);
       N("Settings saved. The agent refreshes its settings within 30 seconds.");
     } catch (e) {
       E(message(e));

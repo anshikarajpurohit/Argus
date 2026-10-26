@@ -1,5 +1,5 @@
-import {useState,useEffect} from 'react';
-import {api,message} from '../api';
+import { useState, useEffect } from "react";
+import { api, message } from "../api";
 export function useData(path, refresh = 0) {
   const [data, setData] = useState(null),
     [error, setError] = useState("");
